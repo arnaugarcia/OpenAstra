@@ -12,20 +12,21 @@ int main() {
 
     int serial_port = open("/dev/ttyUSB0", O_RDWR);
 
-    // Create new termios struc, we call it 'tty' for convention
+    // Create new termios struct, we call it 'tty' for convention
     struct termios tty;
     memset(&tty, 0, sizeof tty);
-
-    // Read in existing settings, and handle any error
-    if(tcgetattr(serial_port, &tty) != 0) {
-        printf("Error %i from tcgetattr: %s\n", errno, strerror(errno));
-    }
 
     // Check for errors
     if (serial_port < 0) {
         // errno 2 = File not exists
         // errno 13 = Permission denied
         printf("Error %i from open: %s\n", errno, strerror(errno));
+        exit(EXIT_FAILURE);
+    }
+
+    // Read in existing settings, and handle any error
+    if(tcgetattr(serial_port, &tty) != 0) {
+        printf("Error %i from tcgetattr: %s\n", errno, strerror(errno));
     }
 
     tty.c_cflag &= ~PARENB; // Clear parity bit, disabling parity (most common)
@@ -111,8 +112,36 @@ int main() {
     cfsetispeed(&tty, B9600);
     cfsetospeed(&tty, B9600);
 
+    /**
+     * Opening port!
+     */
+
     // Save tty settings, also checking for error
     if (tcsetattr(serial_port, TCSANOW, &tty) != 0) {
         printf("Error %i from tcsetattr: %s\n", errno, strerror(errno));
     }
+
+    /**
+     * Writing to the Linux serial port is done through the write() function. We use the serial_port file descriptor which
+     * was returned from the call to open() above.
+     */
+
+    unsigned char msg[] = { 'H', 'e', 'l', 'l', 'o', '\r' };
+    write(serial_port, "Hello, world!", sizeof(msg));
+
+    // Allocate memory for read buffer, set size according to your needs
+    char read_buf [256];
+    memset(&read_buf, '\0', sizeof(read_buf));
+
+    // Read bytes. The behaviour of read() (e.g. does it block?,
+    // how long does it block for?) depends on the configuration
+    // settings above, specifically VMIN and VTIME
+    int n = read(serial_port, &read_buf, sizeof(read_buf));
+
+    // n is the number of bytes read. n may be 0 if no bytes were received, and can also be negative to signal an error.
+
+    /**
+     * Closing port
+     */
+    close(serial_port);
 }
