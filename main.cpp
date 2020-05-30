@@ -52,19 +52,31 @@ int main() {
 
     tty.c_lflag &= ~ISIG; // Disable interpretation of INTR, QUIT and SUSP
 
-    /*
+    /**
      * Input modes
      */
     tty.c_iflag &= ~(IXON | IXOFF | IXANY); // Turn off s/w flow ctrl
 
-    /*
+    /**
      * Clearing all of the following bits disables any special handling of the bytes as they are received by the serial port,
      * before they are passed to the application. We just want the raw data thanks!
      */
     tty.c_iflag &= ~(IGNBRK|BRKINT|PARMRK|ISTRIP|INLCR|IGNCR|ICRNL); // Disable any special handling of received bytes
 
-    /*
+    /**
      * Output Modes (c_oflag)
+     *
+     * The c_oflag member of the termios struct contains low-level settings for output processing. When configuring a serial port,
+     * we want to disable any special handling of output chars/bytes, so do the following:
      */
+    tty.c_oflag &= ~OPOST; // Prevent special interpretation of output bytes (e.g. newline chars)
+    tty.c_oflag &= ~ONLCR; // Prevent conversion of newline to carriage return/line feed
+    // tty.c_oflag &= ~OXTABS; // Prevent conversion of tabs to spaces (NOT PRESENT IN LINUX)
+    // tty.c_oflag &= ~ONOEOT; // Prevent removal of C-d chars (0x004) in output (NOT PRESENT IN LINUX)
+    /**
+     * Both OXTABS and ONOEOT are not defined in Linux. Linux however does have the XTABS field which seems to be related.
+     * When compiling for Linux, I just exclude these two fields and the serial port still works fine.
+     */
+
 
 }
