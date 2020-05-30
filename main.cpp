@@ -51,4 +51,20 @@ int main() {
     tty.c_lflag &= ~ECHONL; // Disable new-line echo
 
     tty.c_lflag &= ~ISIG; // Disable interpretation of INTR, QUIT and SUSP
+
+    /*
+     * Input modes
+     */
+    tty.c_iflag &= ~(IXON | IXOFF | IXANY); // Turn off s/w flow ctrl
+
+    /*
+     * Clearing all of the following bits disables any special handling of the bytes as they are received by the serial port,
+     * before they are passed to the application. We just want the raw data thanks!
+     */
+    tty.c_iflag &= ~(IGNBRK|BRKINT|PARMRK|ISTRIP|INLCR|IGNCR|ICRNL); // Disable any special handling of received bytes
+
+    /*
+     * Output Modes (c_oflag)
+     */
+
 }
