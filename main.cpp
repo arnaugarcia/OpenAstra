@@ -78,5 +78,25 @@ int main() {
      * When compiling for Linux, I just exclude these two fields and the serial port still works fine.
      */
 
-
+    /**
+     * VMIN and VTIME (c_cc)
+     *
+     * An important point to note is that VTIME means slightly different things depending on what VMIN is. When VMIN is 0,
+     * VTIME specifies a time-out from the start of the read() call. But when VMIN is > 0,
+     * VTIME specifies the time-out from the start of the first received character.
+     *
+     * VMIN = 0, VTIME = 0: No blocking, return immediately with what is available
+     *
+     * VMIN > 0, VTIME = 0: This will make read() always wait for bytes (exactly how many is determined by VMIN),
+     * so read() could block indefinitely.
+     *
+     * VMIN = 0, VTIME > 0: This is a blocking read of any number chars with a maximum timeout (given by VTIME).
+     * read() will block until either any amount of data is available, or the timeout occurs. This happens to be my
+     * favourite mode (and the one I use the most).
+     *
+     * VMIN > 0, VTIME > 0: Block until either VMIN characters have been received, or VTIME after first character has elapsed.
+     * Note that the timeout for VTIME does not begin until the first character is received.
+     */
+    tty.c_cc[VTIME] = 10;    // Wait for up to 1s (10 deciseconds), returning as soon as any data is received.
+    tty.c_cc[VMIN] = 0;
 }
