@@ -99,4 +99,15 @@ int main() {
      */
     tty.c_cc[VTIME] = 10;    // Wait for up to 1s (10 deciseconds), returning as soon as any data is received.
     tty.c_cc[VMIN] = 0;
+
+    /**
+     * Baud Rate
+     * Available baud rates:
+     * B0,  B50,  B75,  B110,  B134,  B150,  B200, B300, B600, B1200, B1800, B2400, B4800, B9600, B19200, B38400, B57600, B115200, B230400, B460800
+     */
+
+    // the most common baudrates are: B9600, B57600 and B115200
+    // Set in/out baud rate to be 9600
+    cfsetispeed(&tty, B9600);
+    cfsetospeed(&tty, B9600);
 }
