@@ -136,9 +136,8 @@ int main() {
     // Read bytes. The behaviour of read() (e.g. does it block?,
     // how long does it block for?) depends on the configuration
     // settings above, specifically VMIN and VTIME
-    int n = read(serial_port, &read_buf, sizeof(read_buf));
-
     // n is the number of bytes read. n may be 0 if no bytes were received, and can also be negative to signal an error.
+    // int n = read(serial_port, &read_buf, sizeof(read_buf));
 
     /**
      * Closing port
