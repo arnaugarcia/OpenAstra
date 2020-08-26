@@ -14,12 +14,12 @@
 #include <sys/uio.h>
 #include <net/if.h>
 
-#include "include/linux/can.h"
-#include "include/linux/can/raw.h"
+#include <linux/can.h>
+#include <linux/can/raw.h>
 
 #include "terminal.h"
 #include "lib.h"
-#include "include/socketcan/can.h"
+#include <socketcan/can.h>
 
 #define MAXSOCK 16    /* max. number of CAN interfaces given on the cmdline */
 #define MAXIFNAMES 30 /* size of receive name index to omit ioctls */
@@ -57,8 +57,7 @@ extern int optind, opterr, optopt;
 
 static volatile int running = 1;
 
-void print_usage(char *prg)
-{
+void print_usage(char *prg) {
     fprintf(stderr, "\nUsage: %s [options] <CAN interface>+\n", prg);
     fprintf(stderr, "  (use CTRL-C to terminate %s)\n\n", prg);
     fprintf(stderr, "Options: -t <type>   (timestamp: (a)bsolute/(d)elta/(z)ero/(A)bsolute w date)\n");
@@ -72,7 +71,7 @@ void print_usage(char *prg)
     fprintf(stderr, "         -u <usecs>  (delay bridge forwarding by <usecs> microseconds)\n");
     fprintf(stderr, "         -l          (log CAN-frames into file. Sets '-s %d' by default)\n", SILENT_ON);
     fprintf(stderr, "         -L          (use log file format on stdout)\n");
-    fprintf(stderr, "         -n <count>  (terminate after receiption of <count> CAN frames)\n");
+    fprintf(stderr, "         -n <count>  (terminate after reception of <count> CAN frames)\n");
     fprintf(stderr, "         -r <size>   (set socket receive buffer to <size>)\n");
     fprintf(stderr, "         -d          (monitor dropped CAN frames)\n");
     fprintf(stderr, "         -e          (dump CAN error frames in human-readable format)\n");
@@ -97,8 +96,7 @@ void print_usage(char *prg)
     fprintf(stderr, "\n");
 }
 
-void sigterm(int signo)
-{
+void sigterm(int signo) {
     running = 0;
 }
 
@@ -262,7 +260,7 @@ int main(int argc, char **argv)
                                    &loopback, sizeof(loopback));
                     }
 
-                    if (bind(bridge, (struct sockaddr *)&addr, sizeof(addr)) < 0) {
+                    if (bind(bridge, (struct addr *)&addr, sizeof(addr)) < 0) {
                         perror("bridge bind");
                         return 1;
                     }
@@ -565,7 +563,7 @@ int main(int argc, char **argv)
                     return 1;
                 }
 
-                if (nbytes < sizeof(struct can_frame)) {
+                if (nbytes < sizeof(frame)) {
                     fprintf(stderr, "read: incomplete CAN frame\n");
                     return 1;
                 }
@@ -577,11 +575,11 @@ int main(int argc, char **argv)
                     if (bridge_delay)
                         usleep(bridge_delay);
 
-                    nbytes = write(bridge, &frame, sizeof(struct can_frame));
+                    nbytes = write(bridge, &frame, sizeof(frame));
                     if (nbytes < 0) {
                         perror("bridge write");
                         return 1;
-                    } else if (nbytes < sizeof(struct can_frame)) {
+                    } else if (nbytes < sizeof(frame)) {
                         fprintf(stderr,"bridge write: incomplete CAN frame\n");
                         return 1;
                     }

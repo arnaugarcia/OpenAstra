@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="7cc6b82d-d995-4476-8cc3-6afc2c8c3e22" name="RaspberryPi" url="">
+        <fileTransfer rootFolder="/home/pi/Desktop/OpenAstra" accessType="SFTP" host="192.168.1.10" port="22" sshConfigId="5ef1166a-24fd-4da4-ad1c-20ba4f411b26" sshConfig="pi@192.168.1.10:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
