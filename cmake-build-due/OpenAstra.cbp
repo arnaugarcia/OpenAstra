@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="OpenAstra"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/arnau/CLionProjects/OpenAstra/cmake-build-due"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/arnau/CLionProjects/OpenAstra/cmake-build-due/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/arnau/CLionProjects/OpenAstra/cmake-build-due/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/arnau/CLionProjects/OpenAstra/cmake-build-due/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/arnau/CLionProjects/OpenAstra/cmake-build-due/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/arnau/CLionProjects/OpenAstra/cmake-build-due"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/arnau/CLionProjects/OpenAstra/cmake-build-due/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/arnau/CLionProjects/OpenAstra/cmake-build-due/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/arnau/CLionProjects/OpenAstra/cmake-build-due/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/arnau/CLionProjects/OpenAstra/cmake-build-due/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/arnau/CLionProjects/OpenAstra/cmake-build-due"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/arnau/CLionProjects/OpenAstra/cmake-build-due/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/arnau/CLionProjects/OpenAstra/cmake-build-due/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/arnau/CLionProjects/OpenAstra/cmake-build-due/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/arnau/CLionProjects/OpenAstra/cmake-build-due/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Z_DUMMY_TARGET">
+				<Option output="/Users/arnau/CLionProjects/OpenAstra/cmake-build-due/Z_DUMMY_TARGET" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/arnau/CLionProjects/OpenAstra/cmake-build-due"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/arnau/CLionProjects/OpenAstra/include"/>
+					<Add directory="/Users/arnau/CLionProjects/OpenAstra/src"/>
+					<Add directory="/Users/arnau/.platformio/packages/framework-arduino-sam/cores/arduino"/>
+					<Add directory="/Users/arnau/.platformio/packages/framework-arduino-sam/system/libsam"/>
+					<Add directory="/Users/arnau/.platformio/packages/framework-arduino-sam/system/CMSIS/CMSIS/Include"/>
+					<Add directory="/Users/arnau/.platformio/packages/framework-arduino-sam/system/CMSIS/Device/ATMEL"/>
+					<Add directory="/Users/arnau/.platformio/packages/framework-arduino-sam/variants/arduino_due_x"/>
+					<Add directory="/Users/arnau/.platformio/packages/framework-arduino-sam/libraries/HID/src"/>
+					<Add directory="/Users/arnau/.platformio/packages/framework-arduino-sam/libraries/SPI/src"/>
+					<Add directory="/Users/arnau/.platformio/packages/framework-arduino-sam/libraries/Wire/src"/>
+					<Add directory="/Users/arnau/.platformio/packages/toolchain-gccarmnoneeabi/arm-none-eabi/include/c++/7.2.1"/>
+					<Add directory="/Users/arnau/.platformio/packages/toolchain-gccarmnoneeabi/arm-none-eabi/include/c++/7.2.1/arm-none-eabi"/>
+					<Add directory="/Users/arnau/.platformio/packages/toolchain-gccarmnoneeabi/lib/gcc/arm-none-eabi/7.2.1/include"/>
+					<Add directory="/Users/arnau/.platformio/packages/toolchain-gccarmnoneeabi/lib/gcc/arm-none-eabi/7.2.1/include-fixed"/>
+					<Add directory="/Users/arnau/.platformio/packages/toolchain-gccarmnoneeabi/arm-none-eabi/include"/>
+					<Add directory="/Users/arnau/.platformio/packages/tool-unity"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/arnau/CLionProjects/OpenAstra/cmake-build-due/Makefile&quot;  VERBOSE=1 Z_DUMMY_TARGET"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/arnau/CLionProjects/OpenAstra/cmake-build-due/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/arnau/CLionProjects/OpenAstra/cmake-build-due/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/arnau/CLionProjects/OpenAstra/cmake-build-due/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Z_DUMMY_TARGET/fast">
+				<Option output="/Users/arnau/CLionProjects/OpenAstra/cmake-build-due/Z_DUMMY_TARGET" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/arnau/CLionProjects/OpenAstra/cmake-build-due"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/arnau/CLionProjects/OpenAstra/include"/>
+					<Add directory="/Users/arnau/CLionProjects/OpenAstra/src"/>
+					<Add directory="/Users/arnau/.platformio/packages/framework-arduino-sam/cores/arduino"/>
+					<Add directory="/Users/arnau/.platformio/packages/framework-arduino-sam/system/libsam"/>
+					<Add directory="/Users/arnau/.platformio/packages/framework-arduino-sam/system/CMSIS/CMSIS/Include"/>
+					<Add directory="/Users/arnau/.platformio/packages/framework-arduino-sam/system/CMSIS/Device/ATMEL"/>
+					<Add directory="/Users/arnau/.platformio/packages/framework-arduino-sam/variants/arduino_due_x"/>
+					<Add directory="/Users/arnau/.platformio/packages/framework-arduino-sam/libraries/HID/src"/>
+					<Add directory="/Users/arnau/.platformio/packages/framework-arduino-sam/libraries/SPI/src"/>
+					<Add directory="/Users/arnau/.platformio/packages/framework-arduino-sam/libraries/Wire/src"/>
+					<Add directory="/Users/arnau/.platformio/packages/toolchain-gccarmnoneeabi/arm-none-eabi/include/c++/7.2.1"/>
+					<Add directory="/Users/arnau/.platformio/packages/toolchain-gccarmnoneeabi/arm-none-eabi/include/c++/7.2.1/arm-none-eabi"/>
+					<Add directory="/Users/arnau/.platformio/packages/toolchain-gccarmnoneeabi/lib/gcc/arm-none-eabi/7.2.1/include"/>
+					<Add directory="/Users/arnau/.platformio/packages/toolchain-gccarmnoneeabi/lib/gcc/arm-none-eabi/7.2.1/include-fixed"/>
+					<Add directory="/Users/arnau/.platformio/packages/toolchain-gccarmnoneeabi/arm-none-eabi/include"/>
+					<Add directory="/Users/arnau/.platformio/packages/tool-unity"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/arnau/CLionProjects/OpenAstra/cmake-build-due/Makefile&quot;  VERBOSE=1 Z_DUMMY_TARGET/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/arnau/CLionProjects/OpenAstra/cmake-build-due/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/arnau/CLionProjects/OpenAstra/cmake-build-due/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/arnau/CLionProjects/OpenAstra/cmake-build-due/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Debug">
+				<Option working_dir="/Users/arnau/CLionProjects/OpenAstra/cmake-build-due"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/arnau/CLionProjects/OpenAstra/cmake-build-due/Makefile&quot;  VERBOSE=1 Debug"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/arnau/CLionProjects/OpenAstra/cmake-build-due/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/arnau/CLionProjects/OpenAstra/cmake-build-due/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/arnau/CLionProjects/OpenAstra/cmake-build-due/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Production">
+				<Option working_dir="/Users/arnau/CLionProjects/OpenAstra/cmake-build-due"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/arnau/CLionProjects/OpenAstra/cmake-build-due/Makefile&quot;  VERBOSE=1 Production"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/arnau/CLionProjects/OpenAstra/cmake-build-due/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/arnau/CLionProjects/OpenAstra/cmake-build-due/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/arnau/CLionProjects/OpenAstra/cmake-build-due/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/arnau/CLionProjects/OpenAstra/src/m2/main.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/arnau/CLionProjects/OpenAstra/src/superb/superb.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/arnau/CLionProjects/OpenAstra/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/Users/arnau/CLionProjects/OpenAstra/CMakeListsPrivate.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

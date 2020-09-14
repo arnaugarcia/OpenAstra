@@ -1,0 +1,5 @@
+/Users/arnau/CLionProjects/OpenAstra/cmake-build-due/CMakeFiles/rebuild_cache.dir
+/Users/arnau/CLionProjects/OpenAstra/cmake-build-due/CMakeFiles/edit_cache.dir
+/Users/arnau/CLionProjects/OpenAstra/cmake-build-due/CMakeFiles/Z_DUMMY_TARGET.dir
+/Users/arnau/CLionProjects/OpenAstra/cmake-build-due/CMakeFiles/Debug.dir
+/Users/arnau/CLionProjects/OpenAstra/cmake-build-due/CMakeFiles/Production.dir

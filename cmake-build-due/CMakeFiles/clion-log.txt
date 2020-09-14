@@ -1,0 +1,6 @@
+"/Users/arnau/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/202.6948.80/CLion.app/Contents/bin/cmake/mac/bin/cmake" -DCMAKE_BUILD_TYPE=due -G "CodeBlocks - Unix Makefiles" /Users/arnau/CLionProjects/OpenAstra
+-- Configuring done
+CMake Error: Cannot determine link language for target "Z_DUMMY_TARGET".
+CMake Error: CMake can not determine linker language for target: Z_DUMMY_TARGET
+-- Generating done
+CMake Generate step failed.  Build files cannot be regenerated correctly.
